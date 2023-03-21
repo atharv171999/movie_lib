@@ -1,0 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.card.m-5{
+    width: 18rem;
+}

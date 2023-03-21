@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgb(63, 73, 74);
+  height: 5pc;
+  
+}
+.head {
+  width: 100%;
+  font-size: 200%;
+  font-weight: 800;
+  letter-spacing: 0.1pc;
+  color: white;
+}
+.Q-text {
+  width: 100%;
+  font-size: 120%;
+  position: absolute;
+  top: 25%;
+}
+.inpt-btn-cont {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+}
+.form-control {
+  width: 35%;
+}
+.search-result-cont {
+  width: 100%;
+  position: absolute;
+  top: 58%;
+}
+
+.cont-err {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  color: rgb(10, 72, 216);
+}
+.card.bg-body-tertiary {
+  width: 16rem;
+}
