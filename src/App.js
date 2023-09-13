@@ -1,8 +1,7 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./Component/Navbar";
+import Home from "./Component/Home";
 import MovieDetails from "./Component/MovieDetails";
-import Pagination from "./Component/Pagination";
-// import Error from "./Component/Error";
+
 function App() {
   return (
     <div>
@@ -15,11 +14,8 @@ function App() {
             <div>This is me</div>
           </Route>
           <Route path="/">
-            <NavBar title="MOVIE LIBRARY" />
+            <Home title="MOVIE LIBRARY" />
           </Route>
-          {/* <Route path="/error">
-            <Error />
-          </Route> */}
         </Switch>
       </Router>
     </div>

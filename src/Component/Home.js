@@ -2,9 +2,9 @@ import { React, useEffect, useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import Pagination from "./Pagination";
-import "./Navbarstyle.css";
+import '../App.css'
 
-const Navbar = (props) => {
+const Home = (props) => {
   const [result, setResult] = useState([]);
   const [text, setText] = useState("");
   const [count, setCount] = useState(1);
@@ -60,21 +60,23 @@ const Navbar = (props) => {
 
   return (
     <>
-      <nav className="navbar navbar-expand-lg">
-        <div className="head text-center">{props.title}</div>
-      </nav>
-      <div className="Q-text text-center">Are you looking for movie?</div>
-      <div className="inpt-btn-cont d-flex justify-content-center ">
+    <section className="search-menu" >
+
+      <div className="heading">
+        <div className="">{props.title}</div>
+      </div>
+      <div className=" ">Are you looking for movie?</div>
+      <div className="ipt-btn">
         <input
         placeholder="Typing..."
           type="text"
-          className="form-control"
+          className=""
           onKeyDown={onKeyDown}
           onChange={handleOnChange}
           value={text}
-        />
+          />
         <button
-          className="btn btn-block btn-outline-success m-2"
+        className="btn"
           type="button"
           onClick={movie}
         >
@@ -82,35 +84,36 @@ const Navbar = (props) => {
         </button>
       </div>
       {total && (
-        <div className="cont-err text-center ">Total result: {totalMovies}</div>
-      )}
-      <div className="search-result-cont row ">
+        <div className="">Total result: {totalMovies}</div>
+        )}
+        </section>
+      <div className="card-section">
         {result.map((data, index) => {
-          const { Poster } = data;
+          const { Poster } = data; 
 
           return (
             <>
-              <div key={index} className=" col col-xs-4 mb-5 m ">
-                <div className="container-fluid card bg-body-tertiary">
+              <div key={index} className="card">
+                <div className="img-card">
                   <img
                     src={Poster}
                     onClick={() => handlePushDetails(data)}
-                    className="card-img-top"
+                    className=""
                     alt=""
-                  />
+                    />
                 </div>
               </div>
             </>
           );
         })}
+            </div>
         {page && (
-          <div>
+          <div className="pagination">
             <Pagination totalMovies={totalMovies} setCount={setCount} />
           </div>
         )}
-      </div>
     </>
   );
 };
 
-export default Navbar;
+export default Home;
